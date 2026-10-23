@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wordle + Entropy Solver</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>Wordle</h1><button id="new-game" type="button">New game</button></header>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <main>
+    <section class="game" aria-label="Game">
+      <div id="board" role="grid" aria-label="Guess board"></div>
+      <div id="keyboard" aria-label="Keyboard"></div>
+    </section>
+    <aside class="solver" aria-label="Solver">
+      <h2>Solver</h2>
+      <p id="pool">Loading…</p>
+      <ol id="suggestions"></ol>
+    </aside>
+  </main>
+  <script src="words.js"></script>
+  <script src="solver.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
